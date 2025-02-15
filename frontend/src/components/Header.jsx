@@ -21,13 +21,14 @@ function Header() {
       </div>
       <ul>
         {user ? (
-          <button className="btn" onClick={handleLogout}>
-            <FaSignOutAlt />
-            Logout
-          </button>
+          <li>
+            <button className="btn" onClick={handleLogout}>
+              <FaSignOutAlt />
+              Logout
+            </button>
+          </li>
         ) : (
           <>
-            {" "}
             <li>
               <Link to="/login">
                 <FaSignInAlt />
