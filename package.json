@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \" npm run client\""
   },
   "author": "Rao Hasnain",
   "license": "MIT",
@@ -12,10 +13,14 @@
   "dependencies": {
     "bcryptjs": "^3.0.0",
     "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
